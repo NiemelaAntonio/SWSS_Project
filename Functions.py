@@ -20,13 +20,14 @@ def Look_Min(data):
     _______________
     This is the function that would select the minimum of the data provided
     _______________
-    
+    INPUT  --> Whole data
+    OUTPUT --> Min value and time of this min value
     
     ''' 
-    Min = np.nanmin(data['sym_h'])
-    print(Min)
-    for i in range(len(data['sym_h'])):
-        if data['sym_h'][i] == Min:
-            print(data['times'][i])
-            Time_of_min = data['times'][i]
-    return Min, Time_of_min
+    Min = np.nanmin(data['sym_h'])                  # Numpy function that ignores nan values and looks for the min in a range
+    print(Min)                                      # This is just for trial
+    for i in range(len(data['sym_h'])):             # Indexing the data
+        if data['sym_h'][i] == Min:                 # When the data is equal to the min, it does something
+            print(data['times'][i])                 # This is for trial
+            Time_of_min = data['times'][i]          # This is the time of the minimum
+    return Min, Time_of_min                         # Function returns the min value found and the time of the min
