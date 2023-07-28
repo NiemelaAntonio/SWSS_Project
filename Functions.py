@@ -31,3 +31,16 @@ def Look_Min(data):
             print(data['times'][i])                 # This is for trial
             Time_of_min = data['times'][i]          # This is the time of the minimum
     return Min, Time_of_min                         # Function returns the min value found and the time of the min
+
+
+def Time_Gap(start_time):
+    """Done by Antonio
+    
+    This should be the function that calculates the time gap betweeen storms
+    INPUT : start_time = list of <datetime.datetime>
+    OUTPUT: time_gap   = list of <datetime.timedelta>
+    """ 
+    time_gap = []
+    for index in range(len(start_time)):
+        time_gap.append(start_time[i]-start_time[i-1])
+    return time_gap
